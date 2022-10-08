@@ -1,6 +1,7 @@
 # pytest
+from TDD.money import dollar
 
 def  test_multiprication():
-    five = Dollar(5)
+    five = dollar.Dollar(5)
     five.times(2)
     assert five.amount == 10

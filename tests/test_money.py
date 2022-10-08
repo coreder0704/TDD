@@ -1,5 +1,5 @@
 # pytest
-from TDD.money import dollar
+from money import dollar
 
 def  test_multiprication():
     five = dollar.Dollar(5)

@@ -5,3 +5,8 @@
 - [ ] make amout private
 - [x] ~~Dollar side-effect?~~
 - [ ] rounding for Money?
+- [x] ~~equals()~~
+- [ ] hashCode()
+- [x] ~~annotate a instance argument (like object type in Java)?~~
+- [ ] compare to the equality of None
+- [ ] compare to the equality of other objects

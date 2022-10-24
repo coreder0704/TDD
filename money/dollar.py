@@ -1,3 +1,4 @@
+from __future__ import annotations
 
 class Dollar:
 
@@ -7,5 +8,6 @@ class Dollar:
     def times(self, multiplier: int):
         return Dollar(self.amount * multiplier)
 
-    def equals(self, object) -> bool:
-        return True
+    def equals(self, object: Dollar) -> bool:
+        dollar = object
+        return self.amount == dollar.amount

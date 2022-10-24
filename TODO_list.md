@@ -5,3 +5,6 @@
 - [ ] make amout private
 - [x] ~~Dollar side-effect?~~
 - [ ] rounding for Money?
+- [ ] **equals()**
+- [ ] hashCode()
+- [ ] annotate a instance argument (like object type in Java)?

@@ -8,3 +8,6 @@ def  test_multiprication():
 
     product = five.times(3)
     assert product.amount == 15
+
+def test_equality():
+    assert dollar.Dollar(5).equals(dollar.Dollar(5))

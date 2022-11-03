@@ -10,6 +10,8 @@ def  test_multiprication():
 def test_equality():
     assert dollar.Dollar(5).equals(dollar.Dollar(5))
     assert not dollar.Dollar(5).equals(dollar.Dollar(6))
+    assert franc.Franc(5).equals(franc.Franc(5))
+    assert not franc.Franc(5).equals(franc.Franc(6))
 
 def  test_franc_multiprication():
     five = franc.Franc(5)

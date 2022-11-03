@@ -12,5 +12,6 @@
 - [ ] compare to the equality of other objects
 - [x] 5CHF * 2 = 10CHF
 - [ ] duplications between Dollar and Franc
-- [ ] generalization of equals
+- [x] generalization of equals
 - [ ] generalization of times
+- [ ] compare Franc with Dollar

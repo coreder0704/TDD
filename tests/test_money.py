@@ -1,18 +1,19 @@
 # pytest
 from money import dollar
 from money import franc
+from money import money
 
 def  test_multiprication():
-    five = dollar.Dollar(5)
-    assert five.times(2) == dollar.Dollar(10)
-    assert five.times(3) == dollar.Dollar(15)
+    five = money.Money.dollar(5)
+    assert five.times(2) == money.Money.dollar(10)
+    assert five.times(3) == money.Money.dollar(15)
 
 def test_equality():
-    assert dollar.Dollar(5).equals(dollar.Dollar(5))
-    assert not dollar.Dollar(5).equals(dollar.Dollar(6))
+    assert money.Money.dollar(5).equals(money.Money.dollar(5))
+    assert not money.Money.dollar(5).equals(money.Money.dollar(6))
     assert franc.Franc(5).equals(franc.Franc(5))
     assert not franc.Franc(5).equals(franc.Franc(6))
-    assert not franc.Franc(5).equals(dollar.Dollar(5))
+    assert not franc.Franc(5).equals(money.Money.dollar(5))
 
 def  test_franc_multiprication():
     five = franc.Franc(5)

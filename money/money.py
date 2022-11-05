@@ -1,5 +1,4 @@
 from __future__ import annotations
-from money import dollar
 
 class Money:
 
@@ -16,4 +15,10 @@ class Money:
 
     @staticmethod
     def dollar(amount: int) -> Money:
+        from money import dollar
         return dollar.Dollar(amount)
+
+    @staticmethod
+    def franc(amount: int) -> Money:
+        from money import franc
+        return franc.Franc(amount)

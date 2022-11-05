@@ -12,3 +12,13 @@ class Money:
     def equals(self, other: Money) -> bool:
         return self._amount == other._amount and \
             self.__class__ == other.__class__
+
+    @staticmethod
+    def dollar(amount: int) -> Money:
+        from money import dollar
+        return dollar.Dollar(amount)
+
+    @staticmethod
+    def franc(amount: int) -> Money:
+        from money import franc
+        return franc.Franc(amount)

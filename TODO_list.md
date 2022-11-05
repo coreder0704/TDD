@@ -10,8 +10,9 @@
 - [x] ~~annotate a instance argument (like object type in Java)?~~
 - [ ] compare to the equality of None
 - [ ] compare to the equality of other objects
-- [x] 5CHF * 2 = 10CHF
+- [x] ~~5CHF * 2 = 10CHF~~
 - [ ] duplications between Dollar and Franc
-- [x] generalization of equals
+- [x] ~~generalization of equals~~
 - [ ] generalization of times
-- [ ] compare Franc with Dollar
+- [x] ~~compare Franc with Dollar~~
+- [ ] concept of currency

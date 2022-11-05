@@ -10,4 +10,5 @@ class Money:
             self.__class__ == other.__class__
 
     def equals(self, other: Money) -> bool:
-        return self._amount == other._amount
+        return self._amount == other._amount and \
+            self.__class__ == other.__class__

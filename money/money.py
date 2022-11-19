@@ -2,9 +2,9 @@ from __future__ import annotations
 
 class Money:
 
-    def __init__(self, amount: int):
+    def __init__(self, amount: int, currency: str) -> None:
         self._amount = amount
-        self._currency = ""
+        self._currency = currency
 
     def __eq__(self, other: Money) -> bool:
         return self.__dict__ == other.__dict__ and \

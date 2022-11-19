@@ -13,6 +13,9 @@ class Money:
         return self._amount == other._amount and \
             self.__class__ == other.__class__
 
+    def currency() -> str:
+        pass
+
     @staticmethod
     def dollar(amount: int) -> Money:
         from money import dollar

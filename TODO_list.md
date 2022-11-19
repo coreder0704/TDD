@@ -15,5 +15,5 @@
 - [x] ~~generalization of equals~~
 - [ ] generalization of times
 - [x] ~~compare Franc with Dollar~~
-- [ ] **concept of currency**
+- [x] ~~concept of currency~~
 - [ ] delete test_franc_multiprication()?

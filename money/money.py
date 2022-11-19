@@ -4,6 +4,7 @@ class Money:
 
     def __init__(self, amount: int):
         self._amount = amount
+        self._currency = ""
 
     def __eq__(self, other: Money) -> bool:
         return self.__dict__ == other.__dict__ and \
@@ -13,8 +14,8 @@ class Money:
         return self._amount == other._amount and \
             self.__class__ == other.__class__
 
-    def currency() -> str:
-        pass
+    def currency(self) -> str:
+        return self._currency
 
     @staticmethod
     def dollar(amount: int) -> Money:

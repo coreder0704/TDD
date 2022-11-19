@@ -3,8 +3,12 @@ from money import money
 
 class Dollar(money.Money):
 
+    def __init__(self, amount: int) -> None:
+        super().__init__(amount)
+        self.__currency = "USD"
+
     def times(self, multiplier: int) -> money.Money:
         return Dollar(self._amount * multiplier)
 
     def currency(self) -> str:
-        return "USD"
+        return self.__currency

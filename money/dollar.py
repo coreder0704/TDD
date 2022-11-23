@@ -7,4 +7,4 @@ class Dollar(money.Money):
         super().__init__(amount, currency)
 
     def times(self, multiplier: int) -> money.Money:
-        return money.Money.dollar(self._amount * multiplier)
+        return Dollar(self._amount * multiplier, self._currency)

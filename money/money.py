@@ -14,6 +14,14 @@ class Money:
         return self._amount == other._amount and \
             self.__class__ == other.__class__
 
+    def __str__(self) -> str:
+        return f"{self._amount} {self._currency}"
+
+    __repr__ = __str__
+
+    def times(self, amount: int, multiplyer: int) -> Money:
+        pass
+
     def currency(self) -> str:
         return self._currency
 
@@ -26,3 +34,13 @@ class Money:
     def franc(amount: int) -> Money:
         from money import franc
         return franc.Franc(amount, "CHF")
+
+if __name__ == "__main__":
+    # test __str__()
+    money = Money.dollar(1)
+    print(money)
+    print(money.times(2) == Money.dollar(2))
+
+    money2 = Money.franc(1)
+    print(money2)
+    print(money2.times(2) == Money.franc(2))

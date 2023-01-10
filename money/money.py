@@ -12,15 +12,15 @@ class Money:
 
     def equals(self, other: Money) -> bool:
         return self._amount == other._amount and \
-            self.__class__ == other.__class__
+            self._currency == other._currency
 
     def __str__(self) -> str:
         return f"{self._amount} {self._currency}"
 
     __repr__ = __str__
 
-    def times(self, amount: int, multiplyer: int) -> Money:
-        pass
+    def times(self, multiplier: int) -> Money:
+        return Money(self._amount * multiplier, self._currency)
 
     def currency(self) -> str:
         return self._currency

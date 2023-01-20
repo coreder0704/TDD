@@ -1,25 +1,32 @@
 # pytest
-from money import money
+from money import money as mm
 
 def  test_multiprication():
-    five = money.Money.dollar(5)
-    assert five.times(2) == money.Money.dollar(10)
-    assert five.times(3) == money.Money.dollar(15)
+    five = mm.Money.dollar(5)
+    assert five.times(2).equals(mm.Money.dollar(10))
+    assert five.times(3).equals(mm.Money.dollar(15))
+
 
 def test_equality():
-    assert money.Money.dollar(5).equals(money.Money.dollar(5))
-    assert not money.Money.dollar(5).equals(money.Money.dollar(6))
+    assert mm.Money.dollar(5).equals(mm.Money.dollar(5))
+    assert not mm.Money.dollar(5).equals(mm.Money.dollar(6))
 
-    assert money.Money.franc(5).equals(money.Money.franc(5))
-    assert not money.Money.franc(5).equals(money.Money.franc(6))
+    assert mm.Money.franc(5).equals(mm.Money.franc(5))
+    assert not mm.Money.franc(5).equals(mm.Money.franc(6))
 
-    assert not money.Money.franc(5).equals(money.Money.dollar(5))
+    assert not mm.Money.franc(5).equals(mm.Money.dollar(5))
+
+
+def test_differenct_class_equality():
+    assert mm.Money.franc(5).equals(mm.Money(5, "CHF"))
+
 
 def  test_franc_multiprication():
-    five = money.Money.franc(5)
-    assert five.times(2) == money.Money.franc(10)
-    assert five.times(3) == money.Money.franc(15)
+    five = mm.Money.franc(5)
+    assert five.times(2).equals(mm.Money.franc(10))
+    assert five.times(3).equals(mm.Money.franc(15))
+
 
 def test_currency():
-    assert "USD" == money.Money.dollar(1).currency()
-    assert "CHF" == money.Money.franc(1).currency()
+    assert "USD" == mm.Money.dollar(1).currency()
+    assert "CHF" == mm.Money.franc(1).currency()

@@ -1,10 +1,8 @@
 from __future__ import annotations
-from money import money
+from money import money as mm
 
-class Franc(money.Money):
+
+class Franc(mm.Money):
 
     def __init__(self, amount: int, currency: str) -> None:
         super().__init__(amount, currency)
-
-    def times(self, multiplier: int) -> money.Money:
-        return money.Money.franc(self._amount * multiplier)

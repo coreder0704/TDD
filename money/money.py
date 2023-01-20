@@ -27,13 +27,11 @@ class Money:
 
     @staticmethod
     def dollar(amount: int) -> Money:
-        from money import dollar
-        return dollar.Dollar(amount, "USD")
+        return Money(amount, "USD")
 
     @staticmethod
     def franc(amount: int) -> Money:
-        from money import franc
-        return franc.Franc(amount, "CHF")
+        return Money(amount, "CHF")
 
 if __name__ == "__main__":
     # test __str__()

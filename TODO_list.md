@@ -11,9 +11,9 @@
 - [ ] compare to the equality of None
 - [ ] compare to the equality of other objects
 - [x] ~~5CHF * 2 = 10CHF~~
-- [x] duplications between Dollar and Franc
+- [x] ~~duplications between Dollar and Franc~~
 - [x] ~~generalization of equals~~
-- [x] generalization of times
+- [x] ~~generalization of times~~
 - [x] ~~compare Franc with Dollar~~
 - [x] ~~concept of currency~~
-- [ ] delete test_franc_multiprication()?
+- [x] ~~delete test_franc_multiprication()?~~

@@ -1,5 +1,6 @@
 from __future__ import annotations
 from money import expression as me
+from money import sum as ms
 
 class Money(me.Expression):
 
@@ -28,7 +29,7 @@ class Money(me.Expression):
 
 
     def plus(self, addend: Money) -> me.Expression:
-        return Money(self._amount + addend._amount, self._currency)
+        return ms.Sum(self, addend)
 
     @staticmethod
     def dollar(amount: int) -> Money:

@@ -2,6 +2,7 @@
 from money import money as mm
 from money import bank as mb
 from money import expression as me
+from money import sum as ms
 
 
 def  test_multiprication():
@@ -26,4 +27,25 @@ def test_addition():
     sum: me.Expression = five.plus(mm.Money.dollar(5))
     bank: mb.Bank = mb.Bank()
     reduced: mm.Money = bank.reduce(sum, "USD")
-    assert  reduced == mm.Money.dollar(10)
+    assert reduced == mm.Money.dollar(10)
+
+
+def test_plus_returns_sum():
+    five: mm.Money = mm.Money.dollar(5)
+    result: me.Expression = five.plus(five)
+    sum: ms.Sum = result
+    assert five == sum.augend
+    assert five == sum.addend
+
+
+def test_reduce_sum():
+    sum: ms.Sum = ms.Sum(mm.Money.dollar(3), mm.Money.dollar(4))
+    bank: mb.Bank = mb.Bank()
+    result: mm.Money = bank.reduce(sum, "USD")
+    assert result == mm.Money.dollar(7)
+
+
+def test_reduce_money():
+    bank: mb.Bank = mb.Bank()
+    result: mm.Money = bank.reduce(mm.Money.dollar(1), "USD")
+    assert result == mm.Money.dollar(1)

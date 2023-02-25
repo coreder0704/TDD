@@ -31,6 +31,11 @@ class Money(me.Expression):
     def plus(self, addend: Money) -> me.Expression:
         return ms.Sum(self, addend)
 
+
+    def reduce(self, to: str) -> Money:
+        return self
+
+
     @staticmethod
     def dollar(amount: int) -> Money:
         return Money(amount, "USD")

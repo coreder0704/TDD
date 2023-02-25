@@ -2,8 +2,10 @@
 
 - [x] ~~5 USD + 5 USD = 10 USD~~
 - [x] ~~5 USD + 5 USD returns `Money`~~
-- [ ] **Bank.reduce(mm.Money)**
+- [x] ~~Bank.reduce(mm.Money)~~
 - [ ] 5 USD + 10CHF = 10 USD (if the rate is 2:1)
+- [ ] raise NotImprementedError()
+- [ ] arguments in method overriden interface `Expression` is not match
 - [x] ~~5 USD * 2 = 10 USD~~
 - [x] ~~make amout private~~
 - [x] ~~Dollar side-effect?~~

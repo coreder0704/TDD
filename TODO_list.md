@@ -1,7 +1,8 @@
 # TODO list
 
-- [ ] **5 USD + 5 USD = 10 USD**
-- [ ] 5 USD + 5 USD returns `Money`
+- [x] ~~5 USD + 5 USD = 10 USD~~
+- [x] ~~5 USD + 5 USD returns `Money`~~
+- [ ] **Bank.reduce(mm.Money)**
 - [ ] 5 USD + 10CHF = 10 USD (if the rate is 2:1)
 - [x] ~~5 USD * 2 = 10 USD~~
 - [x] ~~make amout private~~

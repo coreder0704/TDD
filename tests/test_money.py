@@ -1,5 +1,8 @@
 # pytest
 from money import money as mm
+from money import bank as mb
+from money import expression as me
+
 
 def  test_multiprication():
     five = mm.Money.dollar(5)
@@ -16,3 +19,11 @@ def test_equality():
 def test_currency():
     assert "USD" == mm.Money.dollar(1).currency()
     assert "CHF" == mm.Money.franc(1).currency()
+
+
+def test_addition():
+    five: mm.Money = mm.Money.dollar(5)
+    sum: me.Expression = five.plus(mm.Money.dollar(5))
+    bank: mb.Bank = mb.Bank()
+    reduced: mm.Money = bank.reduce(sum, "USD")
+    assert  reduced == mm.Money.dollar(10)

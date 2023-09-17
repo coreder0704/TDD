@@ -56,3 +56,8 @@ def test_reduce_money_different_currency():
     bank.add_rate("CHF", "USD", 2)
     result: mm.Money = bank.reduce(mm.Money.franc(2), "USD")
     assert result == mm.Money.dollar(1)
+
+
+# for learning
+def test_array_equals():
+    assert ["abc"] == ["abc"]

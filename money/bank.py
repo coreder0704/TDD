@@ -5,7 +5,7 @@ from money import expression as me
 
 class Bank:
     def __init__(self) -> None:
-        pass
+        self._rates = {}
 
 
     def reduce(self, source: me.Expression, to: str) -> mm.Money:
@@ -13,11 +13,10 @@ class Bank:
 
 
     def add_rate(self, from_cur: str, to_cur: str, rate: int) -> None:
-        pass
+        self._rates[from_cur, to_cur] = rate
 
 
     def rate(self, from_cur: str, to_cur: str) -> int:
-        if from_cur == "CHF" and to_cur == "USD":
-            return 2
-        else:
+        if from_cur == to_cur:
             return 1
+        return self._rates[from_cur, to_cur]

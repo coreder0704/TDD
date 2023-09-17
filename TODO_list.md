@@ -2,12 +2,13 @@
 
 - [x] ~~Bank.reduce(mm.Money)~~
 - [ ] 5 USD + 10CHF = 10 USD (if the rate is 2:1)
-- [ ] 5 USD + 5 USD = 10 USD
+- [x] ~~5 USD + 5 USD = 10 USD~~
 - [ ] `5 USD + 5 USD` returns `Money`
-- [ ] **conver `Money` and do the conversion**
+- [x] ~~conver `Money` and do the conversion~~
+- [x] ~~reduce(Bank, String)~~
 - [ ] raise NotImprementedError()
 - [ ] arguments in method overriden interface `Expression` is not match
 - [ ] rounding for Money?
-- [ ] hashCode()
+- [x] ~~hashCode()~~
 - [ ] compare to the equality of None
 - [ ] compare to the equality of other objects

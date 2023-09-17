@@ -61,3 +61,16 @@ def test_reduce_money_different_currency():
 # for learning
 def test_array_equals():
     assert ["abc"] == ["abc"]
+
+
+# for learning
+def test_two_keys_to_dictionary():
+    rates = {}
+    from_cur = "CHF"
+    to_cur = "USD"
+    rates[from_cur, to_cur] = 2
+    assert rates["CHF", "USD"] == 2
+
+
+def test_identify_rate():
+    assert mb.Bank().rate("USD", "USD") == 1

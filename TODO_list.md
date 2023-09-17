@@ -1,24 +1,13 @@
 # TODO list
 
-- [x] ~~5 USD + 5 USD = 10 USD~~
-- [x] ~~5 USD + 5 USD returns `Money`~~
 - [x] ~~Bank.reduce(mm.Money)~~
 - [ ] 5 USD + 10CHF = 10 USD (if the rate is 2:1)
+- [ ] 5 USD + 5 USD = 10 USD
+- [ ] `5 USD + 5 USD` returns `Money`
+- [ ] **conver `Money` and do the conversion**
 - [ ] raise NotImprementedError()
 - [ ] arguments in method overriden interface `Expression` is not match
-- [x] ~~5 USD * 2 = 10 USD~~
-- [x] ~~make amout private~~
-- [x] ~~Dollar side-effect?~~
 - [ ] rounding for Money?
-- [x] ~~equals()~~
 - [ ] hashCode()
-- [x] ~~annotate a instance argument (like object type in Java)?~~
 - [ ] compare to the equality of None
 - [ ] compare to the equality of other objects
-- [x] ~~5CHF * 2 = 10CHF~~
-- [x] ~~duplications between Dollar and Franc~~
-- [x] ~~generalization of equals~~
-- [x] ~~generalization of times~~
-- [x] ~~compare Franc with Dollar~~
-- [x] ~~concept of currency~~
-- [x] ~~delete test_franc_multiprication()?~~

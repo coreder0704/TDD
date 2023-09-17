@@ -1,6 +1,7 @@
 from __future__ import annotations
 from money import expression as me
 from money import sum as ms
+from money import bank as mb
 
 class Money(me.Expression):
 
@@ -32,8 +33,9 @@ class Money(me.Expression):
         return ms.Sum(self, addend)
 
 
-    def reduce(self, to: str) -> Money:
-        return self
+    def reduce(self, bank: mb.Bank, to: str) -> Money:
+        rate: int = bank.rate(self._currency, to)
+        return Money(self._amount / rate, to)
 
 
     @staticmethod

@@ -5,7 +5,7 @@ from money import expression as me
 from money import sum as ms
 
 
-def  test_multiprication():
+def test_multiprication():
     five = mm.Money.dollar(5)
     assert five.times(2).equals(mm.Money.dollar(10))
     assert five.times(3).equals(mm.Money.dollar(15))
@@ -49,3 +49,28 @@ def test_reduce_money():
     bank: mb.Bank = mb.Bank()
     result: mm.Money = bank.reduce(mm.Money.dollar(1), "USD")
     assert result == mm.Money.dollar(1)
+
+
+def test_reduce_money_different_currency():
+    bank: mb.Bank = mb.Bank()
+    bank.add_rate("CHF", "USD", 2)
+    result: mm.Money = bank.reduce(mm.Money.franc(2), "USD")
+    assert result == mm.Money.dollar(1)
+
+
+# for learning
+def test_array_equals():
+    assert ["abc"] == ["abc"]
+
+
+# for learning
+def test_two_keys_to_dictionary():
+    rates = {}
+    from_cur = "CHF"
+    to_cur = "USD"
+    rates[from_cur, to_cur] = 2
+    assert rates["CHF", "USD"] == 2
+
+
+def test_identify_rate():
+    assert mb.Bank().rate("USD", "USD") == 1

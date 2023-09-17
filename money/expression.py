@@ -1,9 +1,10 @@
 from __future__ import annotations
 from abc import ABCMeta
 from money import money as mm
+from money import bank as mb
 
 
 class Expression(metaclass=ABCMeta):
-    def reduce(self, to: str) -> mm.Money:
+    def reduce(self, bank: mb.Bank, to: str) -> mm.Money:
         pass
         # raise NotImprementedError()

@@ -11,5 +11,6 @@ class Sum(me.Expression):
 
 
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:
-        amount: int = self.augend._amount + self.addend._amount
+        amount: int = self.augend.reduce(bank, to)._amount \
+              + self.addend.reduce(bank, to)._amount
         return mm.Money(amount, to)

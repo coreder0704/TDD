@@ -1,4 +1,5 @@
 from __future__ import annotations
+from typing import Any
 from money import expression as me
 from money import sum as ms
 from money import bank as mb
@@ -9,7 +10,7 @@ class Money(me.Expression):
         self._amount = amount
         self._currency = currency
 
-    def __eq__(self, other: Money) -> bool:
+    def __eq__(self, other: Any) -> bool:
         return self.__dict__ == other.__dict__ and \
             self.__class__ == other.__class__
 

@@ -6,7 +6,7 @@ from money import bank as mb
 
 class Money(me.Expression):
 
-    def __init__(self, amount: int, currency: str) -> None:
+    def __init__(self, amount: float, currency: str) -> None:
         self._amount = amount
         self._currency = currency
 
@@ -35,7 +35,7 @@ class Money(me.Expression):
 
 
     def reduce(self, bank: mb.Bank, to: str) -> Money:
-        rate: int = bank.rate(self._currency, to)
+        rate: float = bank.rate(self._currency, to)
         return Money(self._amount / rate, to)
 
 

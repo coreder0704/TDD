@@ -17,5 +17,11 @@
 
 ## private task
 
-- [ ] clear mypy error
-- [ ] requirements.txt
+- [x] ~~clear mypy error~~
+- [x] ~~requirements.txt~~
+- [ ] python environment
+  - [ ] nox
+  - [ ] flake8
+  - [ ] black
+  - [ ] isort
+  - [ ] pre-commit

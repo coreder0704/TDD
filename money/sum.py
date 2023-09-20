@@ -5,9 +5,13 @@ from money import bank as mb
 
 
 class Sum(me.Expression):
-    def __init__(self, augend: mm.Money, addend:mm.Money) -> None:
-        self.augend:mm.Money = augend
-        self.addend:mm.Money = addend
+    def __init__(self, augend: me.Expression, addend:me.Expression) -> None:
+        self.augend:me.Expression = augend
+        self.addend:me.Expression = addend
+
+
+    def plus(self, addend: me.Expression) -> me.Expression:
+        pass
 
 
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:

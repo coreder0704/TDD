@@ -23,14 +23,14 @@ class Money(me.Expression):
 
     __repr__ = __str__
 
-    def times(self, multiplier: int) -> Money:
+    def times(self, multiplier: int) -> me.Expression:
         return Money(self._amount * multiplier, self._currency)
 
     def currency(self) -> str:
         return self._currency
 
 
-    def plus(self, addend: Money) -> me.Expression:
+    def plus(self, addend: me.Expression) -> me.Expression:
         return ms.Sum(self, addend)
 
 

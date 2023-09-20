@@ -74,3 +74,12 @@ def test_two_keys_to_dictionary():
 
 def test_identify_rate():
     assert mb.Bank().rate("USD", "USD") == 1
+
+
+def test_mixed_addition():
+    five_bucks: me.Expression = mm.Money.dollar(5)
+    ten_francs: me.Expression = mm.Money.franc(10)
+    bank: mb.Bank = mb.Bank()
+    bank.add_rate("CHF", "USD", 2)
+    result: mm.Money = bank.reduce(five_bucks.plus(ten_francs), "USD")
+    assert result == mm.Money.dollar(10)

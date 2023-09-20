@@ -5,6 +5,10 @@ from money import bank as mb
 
 
 class Expression(metaclass=ABCMeta):
+    def plus(self, addend: Expression) -> Expression:
+        pass
+
+
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:
         pass
         # raise NotImprementedError()

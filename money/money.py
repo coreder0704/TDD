@@ -1,15 +1,16 @@
 from __future__ import annotations
+from typing import Any
 from money import expression as me
 from money import sum as ms
 from money import bank as mb
 
 class Money(me.Expression):
 
-    def __init__(self, amount: int, currency: str) -> None:
+    def __init__(self, amount: float, currency: str) -> None:
         self._amount = amount
         self._currency = currency
 
-    def __eq__(self, other: Money) -> bool:
+    def __eq__(self, other: Any) -> bool:
         return self.__dict__ == other.__dict__ and \
             self.__class__ == other.__class__
 
@@ -22,19 +23,19 @@ class Money(me.Expression):
 
     __repr__ = __str__
 
-    def times(self, multiplier: int) -> Money:
+    def times(self, multiplier: int) -> me.Expression:
         return Money(self._amount * multiplier, self._currency)
 
     def currency(self) -> str:
         return self._currency
 
 
-    def plus(self, addend: Money) -> me.Expression:
+    def plus(self, addend: me.Expression) -> me.Expression:
         return ms.Sum(self, addend)
 
 
     def reduce(self, bank: mb.Bank, to: str) -> Money:
-        rate: int = bank.rate(self._currency, to)
+        rate: float = bank.rate(self._currency, to)
         return Money(self._amount / rate, to)
 
 

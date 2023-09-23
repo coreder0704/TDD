@@ -11,7 +11,7 @@ class Sum(me.Expression):
 
 
     def plus(self, addend: me.Expression) -> me.Expression:
-        pass
+        return Sum(self, addend)
 
 
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:

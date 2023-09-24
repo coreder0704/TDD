@@ -14,6 +14,10 @@ class Sum(me.Expression):
         return Sum(self, addend)
 
 
+    def times(self, multiplier: int) -> me.Expression:
+        return Sum(self.augend.times(multiplier), self.addend.times(multiplier))
+
+
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:
         amount: float = self.augend.reduce(bank, to)._amount \
               + self.addend.reduce(bank, to)._amount

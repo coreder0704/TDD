@@ -2,9 +2,9 @@
 
 ## original task
 
-- [ ] `5 USD + 5 USD` returns `Money`
+- [ ] **`5 USD + 5 USD` returns `Money`**
 - [x] ~~Sum.plus()~~
-- [ ] **Expression.times()**
+- [x] ~~Expression.times()~~
 - [ ] arguments in method overriden interface `Expression` is not match
 - [ ] rounding for Money?
 - [ ] compare to the equality of None

@@ -2,7 +2,7 @@
 
 ## original task
 
-- [ ] **`5 USD + 5 USD` returns `Money`**
+- [x] ~~`5 USD + 5 USD` returns `Money`~~
 - [x] ~~Sum.plus()~~
 - [x] ~~Expression.times()~~
 - [ ] arguments in method overriden interface `Expression` is not match

@@ -83,3 +83,26 @@ def test_mixed_addition():
     bank.add_rate("CHF", "USD", 2)
     result: mm.Money = bank.reduce(five_bucks.plus(ten_francs), "USD")
     assert result == mm.Money.dollar(10)
+
+
+def test_sum_plus_money():
+    five_bucks: me.Expression = mm.Money.dollar(5)
+    ten_francs: me.Expression = mm.Money.franc(10)
+    bank: mb.Bank = mb.Bank()
+    bank.add_rate("CHF", "USD", 2)
+    sum1: me.Expression = ms.Sum(five_bucks, ten_francs).plus(five_bucks)
+    result1: mm.Money = bank.reduce(sum1, "USD")
+    assert result1 == mm.Money.dollar(15)
+    sum2: me.Expression = ms.Sum(five_bucks, ten_francs).plus(ten_francs)
+    result2: mm.Money = bank.reduce(sum2, "USD")
+    assert result2 == mm.Money.dollar(15)
+
+
+def test_sum_times():
+    five_bucks: me.Expression = mm.Money.dollar(5)
+    ten_francs: me.Expression = mm.Money.franc(10)
+    bank: mb.Bank = mb.Bank()
+    bank.add_rate("CHF", "USD", 2)
+    sum1: me.Expression = ms.Sum(five_bucks, ten_francs).times(2)
+    result1: mm.Money = bank.reduce(sum1, "USD")
+    assert result1 == mm.Money.dollar(20)

@@ -9,6 +9,10 @@ class Expression(metaclass=ABCMeta):
         pass
 
 
+    def times(self, multiplier: int) -> Expression:
+        pass
+
+
     def reduce(self, bank: mb.Bank, to: str) -> mm.Money:
         pass
         # raise NotImprementedError()

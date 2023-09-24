@@ -106,3 +106,8 @@ def test_sum_times():
     sum1: me.Expression = ms.Sum(five_bucks, ten_francs).times(2)
     result1: mm.Money = bank.reduce(sum1, "USD")
     assert result1 == mm.Money.dollar(20)
+
+
+def test_plus_same_currency_return_money():
+    sum: me.Expression = mm.Money.dollar(5).plus(mm.Money.dollar(5))
+    assert isinstance(sum, mm.Money)
